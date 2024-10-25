@@ -1,21 +1,37 @@
-#ifndef PROJETO_H
-#define PROJETO_H
+#include <stdio.h>
+#include "projeto.h"
 
-typedef struct {
-    int id;
-    char nome[50];
-    char cpf[12];
-    char senha[20];
-    int amigos[10];
-    int totalAmigos;
-} Usuario;
+int main() {
+    int opcao;
+    Usuario usuarioLogado;
 
+    do {
+        printf("\n--- Sistema de Cadastro de Usuarios ---\n");
+        printf("1. Cadastrar Usuario\n");
+        printf("2. Entrar\n");
+        printf("3. Sair\n");
+        printf("Escolha uma opcao: ");
+        scanf("%d", &opcao);
 
-void cadastrarUsuario();
-int loginUsuario(Usuario *usuarioLogado);
-void menuUsuario(Usuario *usuarioLogado);
-void trocarSenha(Usuario *usuarioLogado);
-void removerConta(char *cpf);
-void enviarSolicitacaoAmizade(Usuario *usuarioLogado);
+        switch (opcao) {
+            case 1:
+                cadastrarUsuario();
+                break;
+            case 2:
+                if (loginUsuario(&usuarioLogado)) {
+                    printf("Login realizado com sucesso!\n");
+                    menuUsuario(&usuarioLogado);
+                } else {
+                    printf("CPF ou senha incorretos!\n");
+                }
+                break;
+            case 3:
+                printf("Saindo...\n");
+                break;
+            default:
+                printf("Opcao invalida!\n");
+        }
+    } while (opcao != 3);
 
-#endif 
+    return 0;
+}
