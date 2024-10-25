@@ -1,6 +1,5 @@
-#include "projeto.h"
 #include <stdio.h>
-#include <stdlib.h>
+#include "projeto.h"
 
 int main() {
     int opcao;
