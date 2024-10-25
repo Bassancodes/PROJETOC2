@@ -10,3 +10,5 @@ typedef struct {
     int amigos[10]; // IDs dos amigos para um máximo de 10 amizades
     int totalAmigos;
 } Usuario;
+
+void enviarSolicitacaoAmizade(Usuario *usuarioLogado);
