@@ -22,7 +22,7 @@ void removerConta(){
     return 0;
 }
 
-void enviarSolicitacaoAmizade{
+void enviarSolicitacaoAmizade(){
     printf("solicitação");
     return 0;
 }
