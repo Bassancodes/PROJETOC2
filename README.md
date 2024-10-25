@@ -29,13 +29,6 @@ O projeto é organizado em três arquivos principais:
    - Remover conta.
    - Enviar solicitação de amizade para outro usuário.
 
-## Pré-requisitos
-
-Para compilar e executar o código, é necessário ter o compilador GCC instalado.
-
 ## Compilação
 
-Para compilar o projeto, navegue até o diretório onde estão os arquivos e execute o seguinte comando:
-
-```bash
-gcc main.c projeto.c -o sistema_usuarios
+Para compilar o projeto, o usuario pode rodar através do bash com o comando "gcc", ou baixar como zip e rodar por qualquer plataforma de sua preferencia.
